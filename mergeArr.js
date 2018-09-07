@@ -48,7 +48,6 @@ function join(arrs, isUnique = false, compare = (a, b) => a - b) {
     while (arr1.length > 0 && arr2.length > 0) {
       result.push(compare(arr1[0], arr2[0]) <= 0 ? arr1.shift() : arr2.shift());
     }
-
     result = result.concat(arr1, arr2);
 
     if (isUnique) {
